@@ -1,0 +1,45 @@
+{
+  "name": "cdk-rest-api-with-spec",
+  "version": "0.2.3",
+  "description": "Describe Amazon API Gateway and OpenAPI at once with CDK",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/index.js.map"
+  ],
+  "scripts": {
+    "build": "rollup -c && api-extractor run --local",
+    "build:tsc": "tsc",
+    "type-check": "tsc --noEmit",
+    "prepare": "npm run build",
+    "doc": "npm run build && api-documenter markdown --input-folder ./temp --output-folder ./api-docs/markdown",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "CDK",
+    "API Gateway",
+    "OpenAPI"
+  ],
+  "author": "Kikuo Emoto <kemoto@codemonger.io>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0"
+  },
+  "dependencies": {
+    "openapi3-ts": "^2.0.2"
+  },
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.23.23",
+    "@microsoft/api-extractor": "^7.40.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.9.6",
+    "tslib": "^2.6.2"
+  },
+  "peerDependecnies": {
+    "aws-cdk-lib": "^2.0",
+    "constructs": "^10.0"
+  }
+}

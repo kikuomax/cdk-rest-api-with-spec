@@ -1,22 +1,10 @@
 {
-  "name": "cdk-rest-api-with-spec",
-  "version": "0.2.2",
+  "name": "cdk-rest-api-with-spec-root",
+  "version": "0.3.0",
   "description": "Describe Amazon API Gateway and OpenAPI at once with CDK",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "files": [
-    "dist/index.js",
-    "dist/index.d.ts",
-    "dist/index.js.map"
+  "workspaces": [
+    "packages/*"
   ],
-  "scripts": {
-    "build": "rollup -c && api-extractor run --local",
-    "build:tsc": "tsc",
-    "type-check": "tsc --noEmit",
-    "prepare": "npm run build",
-    "doc": "npm run build && api-documenter markdown --input-folder ./temp --output-folder ./api-docs/markdown",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "AWS",
     "CDK",
@@ -28,22 +16,11 @@
   "engines": {
     "node": ">=12.0"
   },
-  "dependencies": {
-    "openapi3-ts": "^2.0.2"
-  },
   "devDependencies": {
-    "@microsoft/api-documenter": "^7.23.23",
-    "@microsoft/api-extractor": "^7.40.1",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.11.17",
-    "aws-cdk-lib": "^2.31.0",
-    "constructs": "^10.1.43",
-    "rollup": "^4.9.6",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
-  },
-  "peerDependecnies": {
-    "aws-cdk-lib": "^2.0",
-    "constructs": "^10.0"
+    "aws-cdk": "^2.126.0",
+    "aws-cdk-lib": "^2.126.0",
+    "constructs": "^10.3.0",
+    "typescript": "~5.3.3"
   }
 }

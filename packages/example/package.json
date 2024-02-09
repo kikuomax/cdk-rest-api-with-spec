@@ -1,6 +1,6 @@
 {
-  "name": "example",
-  "version": "0.1.1",
+  "name": "cdk-rest-api-with-spec-example",
+  "version": "0.1.2",
   "bin": {
     "example": "bin/example.js"
   },
@@ -12,17 +12,14 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/node": "20.11.17",
-    "aws-cdk": "^2.126.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
-    "ts-node": "^10.9.2",
-    "typescript": "~5.3.3"
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.126.0",
-    "cdk-rest-api-with-spec": "github:codemonger-io/cdk-rest-api-with-spec#v0.2.2",
-    "constructs": "^10.3.0",
+    "aws-cdk-lib": "*",
+    "cdk-rest-api-with-spec": "*",
+    "constructs": "*",
     "source-map-support": "^0.5.21"
   }
 }
